@@ -16,14 +16,14 @@ interface TopNavProps {
 }
 
 const ROUTES = [
-  { url: RouteName.home, name: "Marketplace" },
+  { url: RouteName.home, name: "Shop" },
   { url: RouteName.sell, name: "Sell" },
-  { url: RouteName.auctionsView, name: "Auctions" },
-  { url: RouteName.drop, name: "Edition Drops" },
+  // { url: RouteName.auctionsView, name: "Auctions" },
+  // { url: RouteName.drop, name: "Edition Drops" },
 ];
 
 const OTHER_LAYOUT_ROUTES = [
-  { url: RouteName.customToken, name: "Custom Token Marketplace" },
+  { url: RouteName.customToken, name: "Marketplace" },
   { url: RouteName.multipleCollection, name: "Multi Collection Marketplace" },
   { url: RouteName.marketplaceWithUrl, name: "Marketplace With URL" },
   {
@@ -80,7 +80,7 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
             <Link to={item.url}>{item.name}</Link>
           </li>
         ))}
-        <DropdownAnchor
+        {/*<DropdownAnchor
           ref={anchorRef}
           onClick={handleToggle}
           className={
@@ -114,7 +114,7 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
               </ClickAwayListener>
             </Paper>
           </Popper>
-        </DropdownAnchor>
+        </DropdownAnchor>*/}
       </Menu>
       {showCurrencyToggle && <CurrencyToggle />}
       <Wallet>

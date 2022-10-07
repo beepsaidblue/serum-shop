@@ -22,7 +22,7 @@ const CustomTokenMarketplace: React.FC = () => {
       env: NETWORK,
       // pass additional settings param to configure shop display
       settings: {
-        currencySymbol: "LQN",
+        currencySymbol: "USDC",
         currencyDecimals: 9,
         priceDecimals: 3,
         volumeDecimals: 1,
@@ -34,9 +34,9 @@ const CustomTokenMarketplace: React.FC = () => {
     <DesContainer>
       <Stat
         candyShop={candyShopRef.current}
-        title={"Marketplace"}
+        title={"Serum Surfers Shop"}
         description={
-          "Candy Shop supports custom SPL tokens as currency. Just specify your token symbol and decimals."
+          "Surf's up! Grab your merch, swag, bling and more..."
         }
         style={{ paddingBottom: 50 }}
       />

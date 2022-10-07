@@ -118,7 +118,7 @@ const App = () => {
                         element={
                           <>
                             <TopNav />
-                            <Marketplace />
+                            <CustomTokenMarketplace />
                           </>
                         }
                       />
@@ -172,7 +172,7 @@ const App = () => {
                         element={
                           <>
                             <TopNav />
-                            <CustomTokenMarketplace />
+                            <Marketplace />
                           </>
                         }
                       />
