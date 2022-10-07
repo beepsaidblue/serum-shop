@@ -23,7 +23,7 @@ const CustomTokenMarketplace: React.FC = () => {
       // pass additional settings param to configure shop display
       settings: {
         currencySymbol: "USDC",
-        currencyDecimals: 9,
+        currencyDecimals: 6,
         priceDecimals: 3,
         volumeDecimals: 1,
       },
