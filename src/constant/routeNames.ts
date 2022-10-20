@@ -1,11 +1,11 @@
 export enum RouteName {
   activityView = "/activity",
   auctionsView = "/auctions",
-  home = "/",
+  home = "/shop",
   marketplace = "/marketplace",
   marketplaceMint = "/marketplace/:tokenMint",
   sell = "/sell",
-  drop = "/drop",
+  drop = "/",
   customToken = "/custom-token-marketplace",
   multipleCollection = "/multi-collection-marketplace",
   marketplaceWithUrl = "/marketplace-with-url",

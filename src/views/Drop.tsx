@@ -9,22 +9,8 @@ const Drop: React.FC = () => {
 
   return (
     <DesContainer>
-      <h1 style={{ marginTop: 40, marginBottom: 15 }}>Edition Drops</h1>
-      <p>
-        Edition drops allow you to mint limited edition serialized NFT
-        collections from your favourite content creators.
-      </p>
-      <p style={{ marginBottom: 40 }}>
-        Note: Shop owners can create edition drops in the{" "}
-        <a
-          href="https://candy.liqnft.com/shop/drops"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          admin panel
-        </a>
-        .
-      </p>
+      <h1 style={{ marginTop: 40, marginBottom: 15, fontSize: 48, color: '#0888fe' }}>Redeem Merch</h1>
+      <p style={{ marginBottom: 40 }}>Redeem your favorite merch with SSDAO</p>
       <Drops
         candyShop={candyShop}
         wallet={wallet}

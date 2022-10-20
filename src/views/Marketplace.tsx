@@ -13,7 +13,7 @@ const Marketplace: React.FC = () => {
         candyShop={candyShop}
         title={"Serum Surfers Shop"}
         description={
-          "Surf's up! Grab your merch, swag and more..."
+          "Surf's up! Shop for unique surfer NFTs with SSDAO and USDC..."
         }
         style={{ paddingBottom: 50 }}
       />

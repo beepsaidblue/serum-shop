@@ -34,9 +34,9 @@ const CustomTokenMarketplace: React.FC = () => {
     <DesContainer>
       <Stat
         candyShop={candyShopRef.current}
-        title={"Serum Surfers Shop"}
+        title={"Surf Shop"}
         description={
-          "Surf's up! Grab your merch, swag, bling and more..."
+          "Buy 1-of-1 surfer NFTs with SSDAO and USDC"
         }
         style={{ paddingBottom: 50 }}
       />
