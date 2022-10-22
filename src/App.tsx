@@ -75,10 +75,10 @@ const currencyOptions = [
     mainnetConnectionUrl: RPC_HOST,
   },
   {
-    currencySymbol: "56p",
-    treasuryMint: "56pdaHboK66cxRLkzkYVvFSAjfoNEETJUsrdmAYaTXMJ",
-    currencyDecimals: 9,
-    priceDecimals: 2,
+    currencySymbol: "USDC",
+    treasuryMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    currencyDecimals: 6,
+    priceDecimals: 3,
     volumeDecimals: 1,
     mainnetConnectionUrl: RPC_HOST,
   },
@@ -117,8 +117,8 @@ const App = () => {
                         path={RouteName.home}
                         element={
                           <>
-                            <TopNav />
-                            <CustomTokenMarketplace />
+                            <TopNav showCurrencyToggle={true} />
+                            <MultiCurrencyMarketplace />
                           </>
                         }
                       />
@@ -135,8 +135,8 @@ const App = () => {
                         path={RouteName.sell}
                         element={
                           <>
-                            <TopNav />
-                            <MyCollection />
+                            <TopNav showCurrencyToggle={true} />
+                            <MultiCurrencySell />
                           </>
                         }
                       />
@@ -153,7 +153,7 @@ const App = () => {
                         path={RouteName.drop}
                         element={
                           <>
-                            <TopNav />
+                            <TopNav showCurrencyToggle={true} />
                             <Drop />
                           </>
                         }
@@ -199,7 +199,7 @@ const App = () => {
                         element={
                           <>
                             <TopNav showCurrencyToggle={true} />
-                            <MultiCurrencyMarketplace />
+                            <CustomTokenMarketplace />
                           </>
                         }
                       />
@@ -208,7 +208,7 @@ const App = () => {
                         element={
                           <>
                             <TopNav showCurrencyToggle={true} />
-                            <MultiCurrencySell />
+                            <MyCollection />
                           </>
                         }
                       />

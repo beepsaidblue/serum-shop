@@ -16,9 +16,9 @@ interface TopNavProps {
 }
 
 const ROUTES = [
-  { url: RouteName.drop, name: "Merch" },
-  { url: RouteName.home, name: "Shop" },
-  { url: RouteName.sell, name: "Sell" },
+  { url: RouteName.drop, name: "MERCH STORE" },
+  { url: RouteName.home, name: "SURFER STORE" },
+  // { url: RouteName.sell, name: "SELL" },
   // { url: RouteName.auctionsView, name: "Auctions" },
 ];
 
@@ -68,63 +68,35 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
   }, [open]);
 
   return (
-    <HeaderBar>
-      <Logo>
-        <Link to={RouteName.home}>
-          <img alt="" src="/logo.png" />
-        </Link>
-      </Logo>
-      <Menu>
-        {ROUTES.map((item) => (
-          <li key={item.url} className={pathname === item.url ? "active" : ""}>
-            <Link to={item.url}>{item.name}</Link>
-          </li>
-        ))}
-        {/*<DropdownAnchor
-          ref={anchorRef}
-          onClick={handleToggle}
-          className={
-            OTHER_LAYOUT_ROUTES.some((item) => item.url === pathname)
-              ? "active"
-              : ""
-          }
-        >
-          Other Layouts
-          <Popper
-            open={open}
-            anchorEl={anchorRef.current}
-            role={undefined}
-            transition
-            disablePortal
-          >
-            <Paper>
-              <ClickAwayListener onClickAway={handleClose}>
-                <MenuList autoFocusItem={open} onKeyDown={handleListKeyDown}>
-                  {OTHER_LAYOUT_ROUTES.map((item) => (
-                    <MenuItem
-                      className={
-                        item.url === pathname ? "active active-submenu" : ""
-                      }
-                      key={item.url}
-                    >
-                      <Link to={item.url}>{item.name}</Link>
-                    </MenuItem>
-                  ))}
-                </MenuList>
-              </ClickAwayListener>
-            </Paper>
-          </Popper>
-        </DropdownAnchor>*/}
-      </Menu>
-      {showCurrencyToggle && <CurrencyToggle />}
-      <Wallet>
-        {wallet ? (
-          <ConnectButton />
-        ) : (
-          <ConnectButton>Connect Wallet</ConnectButton>
-        )}
-      </Wallet>
-    </HeaderBar>
+    <>
+      <HeaderBar>
+        <Logo>
+          <Link to={RouteName.home}>
+            <img alt="Surfers Dao" src="/logo.png" />
+          </Link>
+        </Logo>
+        <HeaderBarRight>
+          {showCurrencyToggle && <CurrencyToggle />}
+          <Wallet>
+            {wallet ? (
+              <ConnectButton />
+            ) : (
+              <ConnectButton>Connect Wallet</ConnectButton>
+            )}
+          </Wallet>
+        </HeaderBarRight>
+      </HeaderBar>
+      <ContentBar>
+        <img alt="Surfers Dao" src="/logo-surfersdao.png" />
+        <Menu>
+          {ROUTES.map((item) => (
+            <li key={item.url} className={pathname === item.url ? "active" : ""}>
+              <Link to={item.url}>{item.name}</Link>
+            </li>
+          ))}
+        </Menu>
+      </ContentBar>
+    </>
   );
 };
 
@@ -133,36 +105,21 @@ const HeaderBar = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 30px;
 `;
 
-const DropdownAnchor = styled.li`
-  cursor: pointer;
-  transition: color 0.3s;
-
-  &:hover,
-  &:active {
-    color: rgb(131, 146, 161);
-    border-bottom: 4px solid var(--title-text-color);
+const ContentBar = styled.div`
+  img {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto 50px;
   }
+`;
 
-  > div {
-    z-index: 1000;
-  }
-
-  .MuiList-root {
-    margin-top: 15px;
-  }
-  a {
-    padding-top: 4px;
-    padding-bottom: 4px;
-
-    &:hover {
-      border-bottom: 0px;
-      color: #fff;
-    }
-  }
+const HeaderBarRight = styled.div`
+  display: flex;
 `;
 
 const Wallet = styled.ul`
@@ -191,22 +148,16 @@ const Menu = styled.ul`
   list-style: none;
   display: inline-flex;
   flex: 1 0 auto;
-  margin-bottom: 0;
-
-  > .active {
-    border-bottom: 4px solid var(--title-text-color);
-  }
-
-  > .active-submenu {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
+  margin-bottom: 60px;
 
   > li {
-    margin: 0 12px;
-    padding: 5px;
-
     a {
+      margin: 0 12px;
+      border-radius: 10px;
+      background-color: var(--button-default-color);
+      display: inline-block;
       color: var(--main-text-color);
+      padding: 6px 60px;
       list-style-image: none;
       list-style-position: outside;
       list-style-type: none;
@@ -216,18 +167,15 @@ const Menu = styled.ul`
       touch-action: manipulation;
       transition: color 0.3s;
 
-      img {
-        max-height: 26px;
+      @media only screen and (max-width: 600px) {
+        padding: 6px 30px;
       }
     }
 
-    &:hover,
-    &:active {
-      border-bottom: 4px solid var(--title-text-color);
-    }
-
-    &:hover > a {
-      color: rgb(131, 146, 161);
+    &:hover > a,
+    &:active > a,
+    &.active > a {
+      background-color: var(--button-active-color);
     }
   }
 `;

@@ -4,7 +4,9 @@
   --card-background-color: #51576d;
   --card-background-lighter-color: #7a7f92;
   --main-text-color: #000;
-  --title-text-color: #0888fe;
+  --title-text-color: #3a93ff;
+  --button-default-color: #d9d9d9;
+  --button-active-color: #3a93ff;
 }
 
 body {
