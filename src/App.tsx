@@ -19,6 +19,7 @@ import {
   getLedgerWallet,
   getSafePalWallet,
 } from "@solana/wallet-adapter-wallets";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 
 import TopNav from "./components/TopNav";
 import { CurrencyProvider } from "./components/Currency";
@@ -94,8 +95,8 @@ const App = () => {
       getSlopeWallet(),
       getSolflareWallet(),
       getSolflareWebWallet(),
-      getSolletWallet({ network: NETWORK }),
-      getSolletExtensionWallet({ network: NETWORK }),
+      getSolletWallet({ network: NETWORK as any as WalletAdapterNetwork }),
+      getSolletExtensionWallet({ network: NETWORK as any as WalletAdapterNetwork }),
       getSolongWallet(),
       getLedgerWallet(),
       getSafePalWallet(),
