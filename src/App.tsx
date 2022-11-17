@@ -68,9 +68,9 @@ const theme = createTheme({
 // Used for a multi-currency shop
 const currencyOptions = [
   {
-    currencySymbol: "SOL",
-    treasuryMint: "So11111111111111111111111111111111111111112",
-    currencyDecimals: 9,
+    currencySymbol: "SSDAO",
+    treasuryMint: "8Gdk7VxU97Jjbu45CpNPdjHygVqwxVG56cvjk3jHTXVH",
+    currencyDecimals: 6,
     priceDecimals: 3,
     volumeDecimals: 1,
     mainnetConnectionUrl: RPC_HOST,
