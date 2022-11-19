@@ -11,6 +11,7 @@ import {
   CANDY_SHOP_PROGRAM_ID,
   NETWORK,
 } from "../utils/candy-shop";
+import InstructionsView from "./InstructionsView";
 
 const DesContainer = styled.div`
   width: 100%;
@@ -43,6 +44,7 @@ const MultiCurrencyMarketplace: React.FC = () => {
         candyShop={candyShop}
         walletConnectComponent={<WalletMultiButton />}
       />
+      <InstructionsView />
     </DesContainer>
   );
 };

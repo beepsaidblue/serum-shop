@@ -95,6 +95,7 @@ const TopNav: React.FC<TopNavProps> = ({ showCurrencyToggle = false }) => {
             </li>
           ))}
         </Menu>
+        <Prompt>Please scroll to the bottom of the page for details regarding redemption of NFTs for physical merch</Prompt>
       </ContentBar>
     </>
   );
@@ -148,7 +149,7 @@ const Menu = styled.ul`
   list-style: none;
   display: inline-flex;
   flex: 1 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 
   > li {
     a {
@@ -178,6 +179,11 @@ const Menu = styled.ul`
       background-color: var(--button-active-color);
     }
   }
+`;
+
+const Prompt = styled.div`
+  margin-bottom: 60px;
+  font-size: 15px;
 `;
 
 export default TopNav;

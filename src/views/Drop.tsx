@@ -11,6 +11,7 @@ import {
   NETWORK,
 } from "../utils/candy-shop";
 import styled from "styled-components";
+import InstructionsView from "./InstructionsView";
 
 const Drop: React.FC = () => {
   const wallet = useAnchorWallet();
@@ -39,11 +40,13 @@ const Drop: React.FC = () => {
         filter
         search
       />
+      <InstructionsView />
     </DesContainer>
   );
 };
 
 export default Drop;
+
 const DesContainer = styled.div`
   width: 100%;
 `;
